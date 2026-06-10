@@ -1,0 +1,24 @@
+.cg-main {
+  .c-img {
+    width: 100%;
+
+    img {
+      width: 50vw;
+      height: 93vh;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cg-main {
+    height: 95.6vh;
+    .c-img {
+      display: none;
+
+      img {
+        width: 50vw;
+        height: 93vh;
+      }
+    }
+  }
+}

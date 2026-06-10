@@ -1,0 +1,244 @@
+//fonts-google
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+// Cores
+$primary: #f4f4f4;
+$secondary: #7af298;
+$tertiary: #181717;
+
+html {
+  scroll-behavior: smooth;
+}
+
+//Reset Geral
+body {
+  overflow-x: hidden;
+  background-color: #f5f5f6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+}
+
+// Botões
+
+$button-bg: transparent;
+$button-color: $primary;
+$button-active-bg: #d1cece;
+$button-border: 1px solid $primary;
+$button-radius: 0.5rem;
+$button-padding: 0.5rem 1rem;
+$button-font-size: 1.5rem;
+$button-font-weight: 700;
+$button-icon-size: 1.5rem;
+$button-icon-color: #fff;
+
+.btn {
+  background: $button-bg;
+  color: $button-color;
+  font-weight: $button-font-weight;
+  padding: $button-padding;
+  border-radius: $button-radius;
+  border: $button-border;
+  font-size: $button-font-size;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: none;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(6px);
+
+  img {
+    width: $button-icon-size;
+    height: auto;
+    color: $secondary;
+  }
+
+  svg {
+    color: $secondary;
+  }
+
+  span,
+  p,
+  button {
+    color: $button-color;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  &:hover {
+    color: $secondary;
+    border-color: $secondary;
+    transform: translateX(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.btn.zap {
+  background-image: url("/icon/whatsapp.svg");
+  background-size: 32px 32px;
+  background-position: 1rem center;
+  background-repeat: no-repeat;
+  padding-left: 3.5rem;
+}
+
+// Tipografia
+$titulo-font-size: 3rem;
+$titulo-font-weight: 700;
+$titulo-color: $primary;
+$text-font-size: 1.2rem;
+$text-font-weight: 400;
+$text-color: white;
+
+// Tipografia
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $titulo-font-size;
+  font-weight: $titulo-font-weight;
+  color: $titulo-color;
+}
+
+p,
+a,
+span,
+li {
+  font-size: $text-font-size;
+  font-weight: $text-font-weight;
+  color: $text-color;
+  line-height: 1.6rem;
+}
+
+// Ultilidades
+.container {
+  padding: 2rem 15rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-colum {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.gap-p {
+  gap: 0.5rem;
+}
+
+.gap-md {
+  gap: 1rem;
+}
+
+.gap-lg {
+  gap: 2rem;
+}
+
+.gap-xl {
+  gap: 3rem;
+}
+
+.gap-xxl {
+  gap: 4rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid4col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.center {
+  text-align: center;
+}
+
+//Mobile
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  a,
+  span,
+  li,
+  summary {
+    font-size: 0.8rem;
+  }
+
+  .grid2col {
+    grid-template-columns: 1fr; // Empilha colunas
+  }
+
+  .grid3col {
+    grid-template-columns: 1fr; // Também empilha colunas
+  }
+
+  .gap-lg {
+    gap: 1rem;
+  }
+
+  .gap-xl {
+    gap: 1.5rem;
+  }
+
+  .gap-xxl {
+    gap: 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
