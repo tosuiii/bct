@@ -1,0 +1,38 @@
+.splash-container {
+  background-color: #1928ad;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    width: 20%;
+    margin-bottom: 2rem;
+  }
+
+  .loader {
+    width: 7rem;
+    height: 7rem;
+    border: 4px solid white;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .splash-container {
+    .logo {
+      width: 40%;
+    }
+    .loader {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
